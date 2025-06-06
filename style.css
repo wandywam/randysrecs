@@ -1,0 +1,179 @@
+body {
+    background-color: black;
+}
+
+.container {
+    margin: 50px 0 0 200px;
+    width: 70%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 10%;
+    height: 100%;
+    transition: all ease-in-out 0.5s;
+    animation: bounce 3s ease 3s infinite;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    transition: all ease-in-out 0.5s;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.image-wrapper:hover {
+    width: 25%;
+}
+
+.image-wrapper:hover .overlay-text {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+.album-wrapper {
+    position: relative;
+    width: 10%;
+    height: 100%;
+    transform: translateX(0);
+    transition: transform 0.5s ease, width 0.5s ease;
+    animation: bounce 3s ease 3s infinite;
+}
+
+.album-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    transition: all ease-in-out 0.5s;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.album-wrapper:hover {
+    width: 50%;
+    transform: translateX(-200px);
+}
+
+.album-wrapper:hover .overlay-text {
+    opacity: 1;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101%;
+    height: 101%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: Nabla;
+}
+
+
+
+
+
+
+
+h1 {
+    margin: 0;
+}
+
+.title {
+    font-family: Nabla;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 50px;
+
+    
+    filter: hue-rotate(210deg) saturate(1) contrast(1.0);
+
+    border-right: solid 3px white;
+
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+
+    animation:
+        type 2s steps(18) 1s forwards,
+        blink 0.5s step-end 6 forwards,
+        bounce 3s ease 3s infinite;
+
+    
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+@keyframes type {
+    to { width: 13ch }
+}
+
+@keyframes blink {
+
+    0%, 100% { border-color: white;}
+    50% {border-color: transparent; }    
+    to { border-color: transparent;}
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+
+
+
+
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 800px;
+}
+
+.icons img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+body {
+    background-image: url('images/grad4.jpg');
+    background-size: 90%;
+    background-position: center;
+    background-blend-mode:luminosity;
+}
